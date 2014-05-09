@@ -11,6 +11,8 @@ namespace WebApiSignalRAngularDemo
             config.Routes.MapHttpRoute("DefaultApi", "api/{controller}");
 
             app.UseWebApi(config);
+
+            app.MapSignalR();
         }
     }
 }
