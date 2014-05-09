@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-
+    
     <link href="app/logo.png" sizes="120x120" rel="apple-touch-icon">
 
     <title>Thinktecture myApp</title>
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, . {
+            display: none !important;
+        }
+    </style>
 
     @Styles.Render("~/app/css")
 </head>
 <body>
     <div id="wrapper">
         <div tt-navbar></div>
-        <div id="page-wrapper" ng-view>
+        <div id="page-wrapper" ng-view class="ng-cloak">
             
         </div>
     </div>
