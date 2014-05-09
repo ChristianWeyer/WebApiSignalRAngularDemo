@@ -134,6 +134,7 @@
     <Content Include="lib\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="lib\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="lib\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="nav.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
