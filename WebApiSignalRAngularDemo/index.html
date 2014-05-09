@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link href="logo.png" sizes="120x120" rel="apple-touch-icon">
+
+    <title>Thinktecture myApp</title>
+
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="lib/css/sb-admin.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <img src="logo.png" /><br />
+                </div>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown pull-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="navbar navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html"><i class="fa fa-table fa-fw"></i> Products</a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-edit fa-fw"></i> Messages</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Admin<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.html">Manage</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">Products</h3>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            On stock
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive" ng-controller="productsList">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="p in products">
+                                            <td>{{ p.Id}} </td>
+                                            <td>{{ p.Title }}</td>
+                                            <td>{{ p.Description }}</td>
+                                            <td>{{ p.Amount }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/js/jquery-1.10.2.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <script src="lib/js/jquery.metisMenu.js"></script>
+    <script src="lib/js/fastclick.js"></script>
+    <script src="lib/js/angular.js"></script>
+    <script src="lib/js/angular-route.js"></script>
+    <script src="lib/js/loading-bar.js"></script>
+    <script src="lib/js/sb-admin.js"></script>
+    <script src="lib/js/jquery.signalR-2.0.3.js"></script>
+
+    <script src="app.js"></script>
+    <script src="products/productsList.js"></script>
+    <script src="services/productsService.js"></script>
+</body>
+</html>
