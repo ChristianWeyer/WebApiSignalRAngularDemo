@@ -6,6 +6,6 @@
     productsService.listProducts().then(function(result) {
         $scope.products = result.data;
     }, function(error) {
-        
+        alert(JSON.stringify(error));
     });
 });
