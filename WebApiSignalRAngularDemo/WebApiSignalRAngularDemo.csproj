@@ -137,6 +137,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\products\products.html" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.woff" />

@@ -15,7 +15,6 @@
         });
     }
 
-
     service.listProducts = function() {
         return $http.get("/api/products");
     };
