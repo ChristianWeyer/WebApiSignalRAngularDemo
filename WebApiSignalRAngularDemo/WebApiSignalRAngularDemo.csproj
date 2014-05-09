@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,17 +40,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.0.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Owin">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.2.1\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin">
@@ -57,13 +60,17 @@
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security">
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -82,6 +89,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
@@ -93,6 +104,26 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -100,46 +131,47 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="lib\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="lib\font-awesome\less\bordered-pulled.less" />
-    <Content Include="lib\font-awesome\less\core.less" />
-    <Content Include="lib\font-awesome\less\fixed-width.less" />
-    <Content Include="lib\font-awesome\less\font-awesome.less" />
-    <Content Include="lib\font-awesome\less\icons.less" />
-    <Content Include="lib\font-awesome\less\larger.less" />
-    <Content Include="lib\font-awesome\less\list.less" />
-    <Content Include="lib\font-awesome\less\mixins.less" />
-    <Content Include="lib\font-awesome\less\path.less" />
-    <Content Include="lib\font-awesome\less\rotated-flipped.less" />
-    <Content Include="lib\font-awesome\less\spinning.less" />
-    <Content Include="lib\font-awesome\less\stacked.less" />
-    <Content Include="lib\font-awesome\less\variables.less" />
-    <Content Include="lib\font-awesome\scss\font-awesome.scss" />
-    <Content Include="lib\font-awesome\scss\_bordered-pulled.scss" />
-    <Content Include="lib\font-awesome\scss\_core.scss" />
-    <Content Include="lib\font-awesome\scss\_fixed-width.scss" />
-    <Content Include="lib\font-awesome\scss\_icons.scss" />
-    <Content Include="lib\font-awesome\scss\_larger.scss" />
-    <Content Include="lib\font-awesome\scss\_list.scss" />
-    <Content Include="lib\font-awesome\scss\_mixins.scss" />
-    <Content Include="lib\font-awesome\scss\_path.scss" />
-    <Content Include="lib\font-awesome\scss\_rotated-flipped.scss" />
-    <Content Include="lib\font-awesome\scss\_spinning.scss" />
-    <Content Include="lib\font-awesome\scss\_stacked.scss" />
-    <Content Include="lib\font-awesome\scss\_variables.scss" />
-    <Content Include="lib\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="lib\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="lib\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="libs\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="libs\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="libs\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="libs\font-awesome\less\bordered-pulled.less" />
+    <Content Include="libs\font-awesome\less\core.less" />
+    <Content Include="libs\font-awesome\less\fixed-width.less" />
+    <Content Include="libs\font-awesome\less\font-awesome.less" />
+    <Content Include="libs\font-awesome\less\icons.less" />
+    <Content Include="libs\font-awesome\less\larger.less" />
+    <Content Include="libs\font-awesome\less\list.less" />
+    <Content Include="libs\font-awesome\less\mixins.less" />
+    <Content Include="libs\font-awesome\less\path.less" />
+    <Content Include="libs\font-awesome\less\rotated-flipped.less" />
+    <Content Include="libs\font-awesome\less\spinning.less" />
+    <Content Include="libs\font-awesome\less\stacked.less" />
+    <Content Include="libs\font-awesome\less\variables.less" />
+    <Content Include="libs\font-awesome\scss\font-awesome.scss" />
+    <Content Include="libs\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="libs\font-awesome\scss\_core.scss" />
+    <Content Include="libs\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="libs\font-awesome\scss\_icons.scss" />
+    <Content Include="libs\font-awesome\scss\_larger.scss" />
+    <Content Include="libs\font-awesome\scss\_list.scss" />
+    <Content Include="libs\font-awesome\scss\_mixins.scss" />
+    <Content Include="libs\font-awesome\scss\_path.scss" />
+    <Content Include="libs\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="libs\font-awesome\scss\_spinning.scss" />
+    <Content Include="libs\font-awesome\scss\_stacked.scss" />
+    <Content Include="libs\font-awesome\scss\_variables.scss" />
+    <Content Include="libs\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="libs\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="libs\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\navigation\nav.html" />
     <Content Include="packages.config" />
-    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
-    <Content Include="Scripts\jquery-2.1.0.js" />
-    <Content Include="Scripts\jquery-2.1.0.min.js" />
-    <Content Include="Scripts\jquery-2.1.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,39 +180,40 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js" />
-    <Content Include="lib\css\bootstrap.css" />
-    <Content Include="lib\css\loading-bar.css" />
-    <Content Include="lib\css\sb-admin.css" />
-    <Content Include="lib\font-awesome\css\font-awesome.css" />
-    <Content Include="lib\font-awesome\css\font-awesome.min.css" />
-    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="lib\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="index.html" />
-    <Content Include="lib\js\angular-route.js" />
-    <Content Include="lib\js\angular.js" />
-    <Content Include="lib\js\bootstrap.js" />
-    <Content Include="lib\js\fastclick.js" />
-    <Content Include="lib\js\jquery-1.10.2.js" />
-    <Content Include="lib\js\jquery.metisMenu.js" />
-    <Content Include="lib\js\loading-bar.js" />
-    <Content Include="lib\js\sb-admin.js" />
-    <Content Include="login.html" />
-    <Content Include="logo.png" />
-    <Content Include="products\productsList.js" />
-    <Content Include="lib\js\jquery.signalR-2.0.3.js" />
-    <Content Include="Scripts\jquery.signalR-2.0.3.js" />
-    <Content Include="Scripts\jquery.signalR-2.0.3.min.js" />
-    <Content Include="services\productsService.js" />
+    <Content Include="libs\99_appInit\app.js" />
+    <Content Include="libs\20_Bootstrap\bootstrap.css" />
+    <Content Include="libs\80_Stuff\loading-bar.css" />
+    <Content Include="libs\80_Stuff\sb-admin.css" />
+    <Content Include="libs\font-awesome\css\font-awesome.css" />
+    <Content Include="libs\font-awesome\css\font-awesome.min.css" />
+    <Content Include="libs\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="libs\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="app\index.cshtml" />
+    <Content Include="libs\50_AngularAddOns\angular-route.js" />
+    <Content Include="libs\40_Angular\angular.js" />
+    <Content Include="libs\20_Bootstrap\bootstrap.js" />
+    <Content Include="libs\80_Stuff\fastclick.js" />
+    <Content Include="libs\10_jQuery\jquery-1.10.2.js" />
+    <Content Include="libs\80_Stuff\jquery.metisMenu.js" />
+    <Content Include="libs\80_Stuff\loading-bar.js" />
+    <Content Include="libs\80_Stuff\sb-admin.js" />
+    <Content Include="app\login\login.html" />
+    <Content Include="app\logo.png" />
+    <Content Include="app\products\productsList.js" />
+    <Content Include="libs\80_Stuff\jquery.signalR-2.0.3.js" />
+    <Content Include="app\services\productsService.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PokeController.cs" />
-    <Compile Include="PokeHub.cs" />
-    <Compile Include="ProductsController.cs" />
+    <Compile Include="Server\BundleConfig.cs" />
+    <Compile Include="Server\PokeController.cs" />
+    <Compile Include="Server\PokeHub.cs" />
+    <Compile Include="Server\Product.cs" />
+    <Compile Include="Server\ProductsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Server\Startup.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -196,7 +229,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>41359</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:41357/</IISUrl>
+          <IISUrl>http://localhost:41359/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -206,6 +239,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
