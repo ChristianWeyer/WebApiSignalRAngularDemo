@@ -1,4 +1,4 @@
-﻿myApp.factory("productsService", function () {
+﻿myApp.factory("productsService", function ($http) {
     var service = {};
 
     var connection = $.hubConnection();
@@ -14,6 +14,11 @@
         connection.start().done(function () {
         });
     }
+
+
+    service.listProducts = function() {
+        return $http.get("/api/products");
+    };
 
     return service;
 });
