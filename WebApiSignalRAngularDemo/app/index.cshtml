@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <img src="logo.png" /><br />
+                    <img src="app/logo.png" /><br />
                 </div>
             </div>
 
@@ -91,8 +91,51 @@
             </div>
         </nav>
 
-        <div id="page-wrapper" ng-view class="ng-cloak">
-
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">Products</h3>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            On stock
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Something uncool - part 1</td>
+                                            <td>No idea what to write here</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Something uncool - part 2</td>
+                                            <td>No idea what to write here :(</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Something uncool - part 3</td>
+                                            <td>No idea what to write here ...</td>
+                                            <td>26</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
