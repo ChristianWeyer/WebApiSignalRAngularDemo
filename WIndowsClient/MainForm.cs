@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Windows.Forms;
 using Microsoft.AspNet.SignalR.Client;
-using WebApiSignalRAngularDemo;
 
 namespace WIndowsClient
 {
+ // dummy
+    public class Product { }
+
     public partial class MainForm : Form
     {
 
