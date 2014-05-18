@@ -5,14 +5,15 @@ describe('Controller: Products List', function () {
 
     beforeEach(module('myApp'));
 
-    beforeEach(inject(function ($controller, $rootScope) {
-        scope = $rootScope.$new();
+    beforeEach(inject(function () {
+        scope = {}; //$rootScope.$new();}
+    }));
+
+    it('should have valid scope defined', inject(function ($controller) {
+        expect(scope).toBeDefined();
+
         productsCtrl = $controller('productsListController', {
             $scope: scope
         });
     }));
-
-    it('should have scope defined', function () {
-        expect(scope).toBeDefined();
-    });
 });
