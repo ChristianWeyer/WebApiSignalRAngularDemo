@@ -137,8 +137,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\navigation\navigation.js" />
-    <Content Include="app\products\products.html" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -172,7 +170,6 @@
     <Content Include="libs\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="libs\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="libs\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="app\navigation\nav.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -201,9 +198,7 @@
     <Content Include="libs\80_Stuff\sb-admin.js" />
     <Content Include="app\login\login.html" />
     <Content Include="app\logo.png" />
-    <Content Include="app\products\productsList.js" />
     <Content Include="libs\80_Stuff\jquery.signalR-2.0.3.js" />
-    <Content Include="app\services\productsService.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
