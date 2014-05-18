@@ -138,7 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\navigation\navigation.js" />
+    <Content Include="app\products\product.html" />
     <Content Include="app\products\products.html" />
+    <Content Include="app\products\productDetails.js" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.woff" />
