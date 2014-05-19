@@ -208,7 +208,8 @@
     <Content Include="app\products\productsList.js" />
     <Content Include="libs\80_Stuff\jquery.signalR-2.0.3.js" />
     <Content Include="app\services\productsService.js" />
-    <Content Include="_tests\simpleTests.js" />
+    <Content Include="_tests\productsServiceTests.js" />
+    <Content Include="_tests\productsControllersTests.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -6,10 +6,10 @@ describe('Controller: Products List', function () {
     beforeEach(module('myApp'));
 
     beforeEach(inject(function () {
-        scope = {}; //$rootScope.$new();}
+        scope = {}; //$rootScope.$new();
     }));
 
-    it('should have valid scope defined', inject(function ($controller) {
+    it('should have a valid scope defined', inject(function ($controller) {
         expect(scope).toBeDefined();
 
         productsCtrl = $controller('productsListController', {

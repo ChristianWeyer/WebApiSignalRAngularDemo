@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNet.SignalR.Client;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Windows.Forms;
-using Microsoft.AspNet.SignalR.Client;
 using WebApiSignalRAngularDemo;
 
 namespace WIndowsClient
