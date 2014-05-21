@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\navigation\navigation.js" />
+    <Content Include="app\products\productDetails.html" />
+    <Content Include="app\products\productDetails.js" />
     <Content Include="app\products\products.html" />
     <Content Include="Global.asax" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />
