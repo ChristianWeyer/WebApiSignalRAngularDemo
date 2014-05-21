@@ -7,5 +7,8 @@
     service.listProducts = function() {
     };
 
+    service.loadProductDetails = function(id) {
+    };
+
     return service;
 });
