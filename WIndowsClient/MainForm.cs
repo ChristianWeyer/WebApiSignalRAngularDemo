@@ -19,7 +19,7 @@ namespace WIndowsClient
             client.BaseAddress = new Uri("http://localhost:41359/api/");
 
             var result = await client.GetAsync("products");
-            var products = await result.Content.ReadAsAsync<List<Product>>();
+            var products = await result.Content.ReadAsAsync<List<dynamic>>();
 
             listBox1.DisplayMember = "Title";
             listBox1.DataSource = products;
