@@ -6,12 +6,8 @@ using Microsoft.AspNet.SignalR.Client;
 
 namespace WIndowsClient
 {
- // dummy
-    public class Product { }
-
     public partial class MainForm : Form
     {
-
         public MainForm()
         {
             InitializeComponent();
@@ -31,13 +27,7 @@ namespace WIndowsClient
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            var hubConnection = new HubConnection("http://localhost:41359");
-
-            var chat = hubConnection.CreateHubProxy("pokeHub");
-            chat.On<string>("poke", msg => this.Invoke(
-                new Action(() => MessageBox.Show(msg))));
-
-            await hubConnection.Start();
+            
         }
     }
 }
