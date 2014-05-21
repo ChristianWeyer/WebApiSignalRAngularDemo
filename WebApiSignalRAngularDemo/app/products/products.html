@@ -24,6 +24,14 @@
             </div>
         </div>
         
+        <div>
+            <input class="form-control" type="text" ng-model="dataToPoke"/>
+            <br/>
+            <button class="btn btn-default" ng-click="pokeAll()">Poke all</button>
+            <h4>Poked data:</h4>
+            {{ pokedData }}
+        </div>
+
         <div ng-if="false">
             <h4>Debug data:</h4>
             {{ products | json }}
