@@ -19,5 +19,13 @@
         return $http.get("/api/products");
     };
 
+    service.loadProductDetails = function (id) {
+        return $http.get("/api/products?id=" + id);
+    };
+
+    service.pokeAll = function(data) {
+        return $http.get("/api/poke?data=" + data);
+    };
+
     return service;
 });
