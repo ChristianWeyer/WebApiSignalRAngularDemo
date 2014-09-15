@@ -1,4 +1,4 @@
-SDDConf2014Demo
-===============
+WebApiSignalRAngularDemo
+========================
 
-SDDConf2014Demo
+Small demo application for various conferences. Uses ASP.NET WebApi, SignalR, and AngularJS.
