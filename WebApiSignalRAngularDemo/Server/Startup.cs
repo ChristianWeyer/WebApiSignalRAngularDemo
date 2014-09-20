@@ -12,14 +12,6 @@ namespace WebApiSignalRAngularDemo
         {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var config = new HttpConfiguration();
-            config.Routes.MapHttpRoute("DefaultApi", "api/{controller}");
-            config.Formatters.Clear();
-            config.Formatters.Add(new JsonMediaTypeFormatter());
-
-            app.UseWebApi(config);
-
-            app.MapSignalR();
         }
     }
 }

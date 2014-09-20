@@ -1,5 +1,5 @@
 ﻿myApp.controller("productsListController", function($scope, productsService, $location) {
-    productsService.init($scope);
+    //productsService.init($scope);
 
     $scope.$on("productsPoke", function(evt, data) {
         $scope.$apply(function() {
@@ -10,7 +10,7 @@
     productsService.listProducts().then(function(result) {
         $scope.products = result.data;
     }, function(error) {
-        alert(JSON.stringify(error));
+        //alert(JSON.stringify(error));
     });
 
     $scope.loadDetails = function(product) {
