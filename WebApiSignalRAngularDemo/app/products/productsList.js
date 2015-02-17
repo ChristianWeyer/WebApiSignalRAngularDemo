@@ -1,17 +1,9 @@
-﻿myApp.controller("productsListController", function ($scope, $http, productsService) {
+﻿myApp.controller("productsListController", function ($scope, productsService) {
     $scope.products = [{ Id: 1, Title: "Viedell Wassa", Description: "Very legga whahda", Amount: 14 }, { Id: 2, Title: "Schio Dschibbs", Description: "Guad abba ungsunnd", Amount: 9 }, { Id: 3, Title: "Schogglaad leid", Description: "Schmeggt e bissl komisch - abba naja", Amount: 249 }];
-
-    //productsService.init($scope);
 
     //$scope.$on("productsPoke", function (evt, data) {
     //    $scope.$apply(function () {
-    //        $scope.pokeData = data;
+    //        $scope.pokedData = data;
     //    });
     //});
-
-    //$http.get("/api/products")
-    //    .then(function (result) {
-    //        $scope.products = result.data;
-    //    }, function (error) {
-    //    });
 });

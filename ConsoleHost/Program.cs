@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 using WebApiSignalRAngularDemo;
 
@@ -14,7 +10,7 @@ namespace ConsoleHost
         {
             using (var server = WebApp.Start<Startup>("http://localhost:9999"))
             {
-                Console.WriteLine("Server running...");
+                Console.WriteLine("Web API server running...");
                 Console.ReadLine();
             }
         }

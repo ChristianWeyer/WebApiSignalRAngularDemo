@@ -27,10 +27,13 @@
                     </table>
                 </div>
             </div>
-            
+
             <div>
-                <input type="text" ng-model="pokeData"/>
-                
+                <input class="form-control" type="text" ng-model="dataToPoke" />
+                <br />
+                <button class="btn btn-default" ng-click="pokeAll()">Poke all</button>
+                <h4>Poked data:</h4>
+                {{ pokedData }}
             </div>
         </div>
     </div>
