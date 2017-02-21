@@ -33,7 +33,7 @@ namespace WIndowsClient
 
             var chat = hubConnection.CreateHubProxy("pokeHub");
             chat.On<string>("poke", msg => this.Invoke(
-                new Action(() => MessageBox.Show(msg))));
+                new Action(() => label1.Text = msg)));
 
             await hubConnection.Start();
         }

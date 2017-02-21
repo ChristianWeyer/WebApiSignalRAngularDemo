@@ -7,7 +7,7 @@ import {ProductsService} from "../services/productsService";
 })
 export class HomeComponent implements OnInit {
     public products: Array<any> = [];
-    public pokeData: string = "Test";
+    public pokeData: string = "-";
 
     constructor(private _productsService: ProductsService, private _zone: NgZone) {
     }
